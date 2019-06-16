@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>1231231111111111112312312</div>
+
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+        <script>
+
+            function callAjax() {
+                return $.ajax({
+                        url: 'https://api.hnpwa.com/v0/news/1.json'
+                    });
+            }
+
+            function fetchData() {
+                var result = [];
+
+                callAjax().then(function(data) {
+                    console.log('데이터 호출 결과', data);
+                    result = data;
+                    console.log('함수 결과', result);
+                })
+
+            }
+        </script>
+    </body>
+</html>
