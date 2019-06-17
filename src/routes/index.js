@@ -23,10 +23,12 @@ export const router = new VueRouter({
         },
         {
             path: '/ask',
+            name : 'ask',
             component: AskView,
         },
         {
             path: '/jobs',
+            name : 'jobs',
             component: JobsView,
         },
         {

@@ -29,7 +29,7 @@ export default {
         ...mapGetters(['fetchedAsk']) 
     },
     created() {
-        this.$store.dispatch('FETCH_ASK')
+        this.$store.dispatch('FETCH_ASK');
     }
 }
 </script>
