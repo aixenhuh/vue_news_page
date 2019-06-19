@@ -3,7 +3,7 @@
         <ul class="news-list">
             <li v-for="job in fetchedJobs" class="post">
                 <!-- 포인트 영역 -->
-                <div class="points">
+                <div class="points"> 
                     {{ job.points || 0 }}
                 </div>
 
