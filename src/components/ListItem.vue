@@ -14,9 +14,9 @@
                         <template v-if="item.domain">
                             <a :href="item.url">{{ item.title }}</a>
                         </template>
-                        <tempate v-else>
+                        <template v-else>
                             <router-link :to="`item/${item.id}`">{{ item.title }}</router-link>
-                        </tempate>
+                        </template>
                     </p>
                     
                     <small class="link-text">{{item.time_ago}} by
