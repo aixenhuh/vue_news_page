@@ -2,8 +2,10 @@
     <div>
         <section>
             <user-profile :info="fetchedItems">
-                <div slot="username">{{ fetchedItems.user }}</div>
-                <template slot="time">{{ fetchedItems.time_ago }}</template>
+                <router-link slot="username" :to="`/user/${fetchedItems.user}`">
+                    {{ fetchedItems.user }}
+                </router-link>
+                <template slot="time">{{ 'posted by' + fetchedItems.time_ago }}</template>
             </user-profile>
             <!-- 사용자 정보 -->
             <!-- <div class="user-container">
@@ -42,7 +44,7 @@ export default {
     },
     created() {
         const userId = this.$route.params.id;
-        this.$store.dispatch('FETCH_ITEMS', userId)
+        this.$store.dispatch('FETCH_JOBS', userId)
     }
 }
 </script>

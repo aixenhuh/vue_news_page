@@ -4,15 +4,21 @@
             <i class="fas fa-user"></i>
         </div>
         <div class="user-description">
-            <!-- 상위 컴포넌트에서 정의할 영역 -->
-            userName : <slot name="username"></slot>
+
+            <slot name="username">
+                <!-- 상위 컴포넌트에서 정의할 영역 -->
+            </slot>
             <!-- <router-link :to="`/user/${userInfo.user}`">
                 {{ userInfo.id }}
             </router-link> -->
-            <div class="time"> time :
-                <slot name="time"></slot>
+            <div class="time">
+                <slot name="time">
+                    <!-- 상위 컴포넌트에서 정의할 영역 -->
+                </slot>
+                <slot name="karma">
+                    <!-- 상위 컴포넌트에서 정의할 영역 -->
+                </slot>
             </div>
-            <slot name="karma"></slot>
         </div>
     </div>
 </template>
