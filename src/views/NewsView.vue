@@ -1,45 +1,16 @@
 <template>
     <div>
-<<<<<<< HEAD
         <list-item></list-item>
-=======
-        <ul class="news-list">
-            <li v-for='item in fetchedNews' class="post">
-                <!-- 포인트 영역 -->
-                <div class="points">
-                    {{ item.points }}
-                </div>
-
-                <!-- 기타 정보 영역 -->
-                <div>
-                    <p class="news-title">
-                        <a :href="item.url">{{ item.title }}</a>
-                    </p>
-                    <small class="link-text">{{item.time_ago}} by
-                        <router-link v-bind:to="`/user/${item.user}`" class="link-text">{{ item.user }}</router-link>
-                    </small>
-                </div>
-
-            </li>
-        </ul>
->>>>>>> commit
     </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 import ListItem from '../components/ListItem.vue';
 import bus from '../utils/bus.js';
 
 export default {
     components : {
         ListItem,
-=======
-import { mapGetters } from 'vuex';
-export default {
-    computed : {
-        ...mapGetters(['fetchedNews'])
->>>>>>> commit
     },
     created() {
         bus.$emit('start:spinner');
@@ -49,9 +20,6 @@ export default {
 }
 </script>
 
-<<<<<<< HEAD
-<style scoped></style>
-=======
 <style scoped>
 .news-list {
     margin:0;
@@ -81,6 +49,4 @@ export default {
 .link-text {
     color : #828282
 }
-
 </style>
->>>>>>> commit
