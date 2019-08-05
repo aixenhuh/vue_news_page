@@ -7,18 +7,6 @@
                 </router-link>
                 <template slot="time">{{ 'posted by' + fetchedItems.time_ago }}</template>
             </user-profile>
-            <!-- 사용자 정보 -->
-            <!-- <div class="user-container">
-                    <i class="fas fa-user"></i>
-            </div>
-            <div class="user-description">
-                <router-link :to="`/user/${fetchedItems.user}`">
-                    {{ fetchedItems.user }}
-                </router-link>
-            </div>
-            <div class="time">
-                {{ fetchedItems.time_ago}}
-            </div> -->
         </section>
         <section>
             <h2>
